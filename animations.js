@@ -91,9 +91,8 @@ const html = document.documentElement;
 const themeIcon = themeSwitch.querySelector('i');
 
 // Check for saved theme preference
-const savedTheme = localStorage.getItem('theme') || 'light';
-html.setAttribute('data-theme', savedTheme);
-updateThemeIcon(savedTheme);
+const storedTheme = localStorage.getItem('theme') || 'dark'; // Set dark as default
+html.setAttribute('data-theme', storedTheme);
 
 themeSwitch.addEventListener('click', () => {
     themeSwitch.style.transform = 'scale(0.95) rotate(10deg)';
@@ -113,6 +112,8 @@ function updateThemeIcon(theme) {
     themeIcon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
     themeIcon.style.transform = 'rotate(360deg)';
 }
+
+updateThemeIcon(storedTheme);
 
 // Add CSS animation class
 const style = document.createElement('style');
