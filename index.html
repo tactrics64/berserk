@@ -23,7 +23,6 @@
             </div>
             <div class="nav-links">
                 <a href="#features">Features</a>
-                <a href="#commands">Commands</a>
                 <a href="#stats">Stats</a>
                 <a href="#support">Support</a>
                 <a href="https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&scope=bot" class="cta-button">Add to Discord</a>
@@ -37,44 +36,47 @@
                 <h1>The Most Advanced Discord Chess Bot</h1>
                 <p>Experience chess like never before with cutting-edge features, real-time analysis, and seamless Discord integration.</p>
                 <div class="cta-buttons">
-                    <a href="#" class="cta-button primary-button">Add to Discord</a>
+                    <a href="https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&scope=bot" class="cta-button primary-button">Add to Discord</a>
                     <a href="#features" class="cta-button secondary-button">Explore Features</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <section class="status-section">
+    <section id="getting-started" class="getting-started">
         <div class="container">
-            <div class="status-wrapper">
-                <div class="status-card">
-                    <div class="status-indicator">
-                        <span class="status-dot"></span>
-                        <span class="status-text">Operational</span>
-                    </div>
-                    <div class="status-details">
-                        <div class="status-item">
-                            <i class="fas fa-server"></i>
-                            <div class="status-info">
-                                <span class="status-label">Servers</span>
-                                <span class="status-value" id="server-count">Loading...</span>
-                            </div>
-                        </div>
-                        <div class="status-item">
-                            <i class="fas fa-bolt"></i>
-                            <div class="status-info">
-                                <span class="status-label">Latency</span>
-                                <span class="status-value" id="latency">Loading...</span>
-                            </div>
-                        </div>
-                        <div class="status-item">
-                            <i class="fas fa-chess"></i>
-                            <div class="status-info">
-                                <span class="status-label">Active Games</span>
-                                <span class="status-value" id="active-games">Loading...</span>
-                            </div>
-                        </div>
-                    </div>
+            <h2>Getting Started</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <i class="fas fa-plus-circle"></i>
+                    <h3>Add to Server</h3>
+                    <p>Invite Berserk to your Discord server with a single click</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <i class="fas fa-link"></i>
+                    <h3>Link Account</h3>
+                    <p>Connect your Chess.com or Lichess.org account</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Track Progress</h3>
+                    <p>View your stats, check daily progress, and compete on the leaderboard</p>
+                </div>
+            </div>
+            <div class="quick-start">
+                <h3>Quick Start Commands</h3>
+                <div class="command-examples">
+                    <code>/link [username] [site]</code>
+                    <code>/verify [site]</code>
+                    <code>/stats [username] [site]</code>
+                    <code>/daily-stats [username] [site]</code>
+                    <code>/leaderboard [site] [category]</code>
+                </div>
+                <div class="quick-start-cta">
+                    <a href="pages/commands.html" class="cta-button secondary-button">View All Commands</a>
                 </div>
             </div>
         </div>
@@ -82,84 +84,31 @@
 
     <section id="features" class="features">
         <div class="container">
-            <h2>Why Choose Berserk?</h2>
+            <h2>Key Features</h2>
             <div class="feature-grid">
                 <div class="feature-card">
                     <i class="fas fa-chess"></i>
-                    <h3>Play Anytime</h3>
-                    <p>Challenge members, play tournaments, or practice against the bot</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-brain"></i>
-                    <h3>Advanced Analysis</h3>
-                    <p>Get instant game analysis and improvement suggestions</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-trophy"></i>
-                    <h3>Tournaments</h3>
-                    <p>Organize and manage chess tournaments effortlessly</p>
+                    <h3>Profile Integration</h3>
+                    <p>Link and verify your Chess.com and Lichess profiles seamlessly.</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-chart-line"></i>
-                    <h3>Track Progress</h3>
-                    <p>Monitor your rating and improvement over time</p>
+                    <h3>Statistics Tracking</h3>
+                    <p>Track your progress with comprehensive daily and weekly statistics.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Leaderboards</h3>
+                    <p>Compete with server members across multiple categories.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Server Management</h3>
+                    <p>Automated roles and server statistics at your fingertips.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="commands" class="commands">
-        <div class="container">
-            <h2>Command List</h2>
-            <div class="command-list">
-                <div class="command-item">
-                    <code>/link [chess.com/lichess.org] [username]</code>
-                    <p>Link your chess platform account to your Discord profile</p>
-                </div>
-                <div class="command-item">
-                    <code>/verify [chess.com/lichess.org]</code>
-                    <p>Verify ownership of your chess platform account</p>
-                </div>
-                <div class="command-item">
-                    <code>/profile [optional: @member]</code>
-                    <p>View your or another member's linked chess profiles</p>
-                </div>
-                <div class="command-item">
-                    <code>/unlink [chess.com/lichess.org]</code>
-                    <p>Unlink a chess platform account from your profile</p>
-                </div>
-                <div class="command-item">
-                    <code>/stats [username] [chess.com/lichess.org]</code>
-                    <p>View detailed chess statistics for any player</p>
-                </div>
-                <div class="command-item">
-                    <code>/daily_stats [username] [chess.com/lichess.org]</code>
-                    <p>View daily chess statistics and performance</p>
-                </div>
-                <div class="command-item">
-                    <code>/weekly_stats [username] [chess.com/lichess.org]</code>
-                    <p>View weekly chess statistics and trends</p>
-                </div>
-                <div class="command-item">
-                    <code>/leaderboard [chess.com/lichess.org] [category]</code>
-                    <p>View server leaderboard for different time controls</p>
-                </div>
-                <div class="command-item">
-                    <code>/server_stats</code>
-                    <p>View server statistics and member information</p>
-                </div>
-                <div class="command-item">
-                    <code>/status</code>
-                    <p>Check bot status and performance metrics</p>
-                </div>
-                <div class="command-item">
-                    <code>/ping</code>
-                    <p>Check bot latency and response time</p>
-                </div>
-                <div class="command-item">
-                    <code>/help</code>
-                    <p>View detailed help and command information</p>
-                </div>
+            <div class="feature-cta">
+                <a href="pages/features.html" class="cta-button secondary-button">View All Features</a>
             </div>
         </div>
     </section>
@@ -184,20 +133,79 @@
         </div>
     </section>
 
-    <section id="support" class="support">
+    <section id="support" class="community-support">
         <div class="container">
-            <h2>Need Help?</h2>
-            <div class="support-content">
-                <a href="https://discord.gg/cgtUBgEGfT" class="support-card">
+            <h2>Community & Support</h2>
+            <div class="community-grid">
+                <div class="community-card discord">
                     <i class="fab fa-discord"></i>
-                    <h3>Join Support Server</h3>
-                    <p>Get help from our community</p>
-                </a>
-                <a href="#" class="support-card">
+                    <h3>Join Our Discord</h3>
+                    <p>Join our active community for support, strategy sharing, and events. Our team is available 24/7 to help you with any questions!</p>
+                    <a href="https://discord.gg/cgtUBgEGfT" class="community-btn">Join Server</a>
+                    <div class="community-stats">
+                        <div class="stat">
+                            <span class="stat-number">5000+</span>
+                            <span class="stat-label">Members</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Support</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="community-card guides">
                     <i class="fas fa-book"></i>
-                    <h3>Documentation</h3>
-                    <p>Read our detailed guides</p>
-                </a>
+                    <h3>Quick Start Guide</h3>
+                    <p>New to Berserk? Check out our comprehensive guides to get started with tracking your chess progress.</p>
+                    <a href="#getting-started" class="community-btn">View Guides</a>
+                    <div class="community-stats">
+                        <div class="stat">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Guides</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">Easy</span>
+                            <span class="stat-label">Setup</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="community-card help">
+                    <i class="fas fa-life-ring"></i>
+                    <h3>Help Center</h3>
+                    <p>Need help with commands or having technical issues? Check our troubleshooting guides or contact our support team.</p>
+                    <a href="#faq" class="community-btn">Get Help</a>
+                    <div class="community-stats">
+                        <div class="stat">
+                            <span class="stat-number">Fast</span>
+                            <span class="stat-label">Response</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Resolution</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>How do I add Berserk to my server?</h4>
+                    <p>Click the "Add to Discord" button and follow the simple setup process.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Is Berserk free to use?</h4>
+                    <p>Yes! Berserk is completely free to use.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I link multiple chess accounts?</h4>
+                    <p>Yes, you can link both Chess.com and Lichess accounts.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How often are stats updated?</h4>
+                    <p>Stats are updated every 30 minutes to ensure accurate tracking.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -205,43 +213,32 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-brand">
-                    <span class="footer-logo">Berserk</span>
-                    <p>The most advanced Discord chess bot</p>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#stats">Stats</a></li>
+                        <li><a href="#support">Support</a></li>
+                    </ul>
                 </div>
-                <div class="footer-links">
-                    <div class="footer-section">
-                        <h3>Navigation</h3>
-                        <ul>
-                            <li><a href="#features">Features</a></li>
-                            <li><a href="#commands">Commands</a></li>
-                            <li><a href="#stats">Stats</a></li>
-                            <li><a href="#support">Support</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h3>Legal</h3>
-                        <ul>
-                            <li><a href="pages/terms.html">Terms of Service</a></li>
-                            <li><a href="pages/privacy.html">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h3>Connect</h3>
-                        <ul>
-                            <li><a href="https://discord.gg/cgtUBgEGfT"><i class="fab fa-discord"></i> Discord</a></li>
-                            <li><a href="https://github.com/tactrics64"><i class="fab fa-github"></i> GitHub</a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-                        </ul>
-                    </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="pages/terms.html">Terms of Service</a></li>
+                        <li><a href="pages/privacy.html">Privacy Policy</a></li>
+                    </ul>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Berserk. All rights reserved.</p>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="https://discord.gg/cgtUBgEGfT"><i class="fab fa-discord"></i> Discord</a></li>
+                        <li><a href="https://github.com/tactrics64"><i class="fab fa-github"></i> GitHub</a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </footer>
-
     <script src="animations.js"></script>
 </body>
 </html>
