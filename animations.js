@@ -1,3 +1,59 @@
+// Custom cursor initialization
+const cursorDot = document.querySelector('.cursor-dot');
+const cursorOutline = document.querySelector('.cursor-outline');
+let mouseX = window.innerWidth / 2;  // Initialize to center of screen
+let mouseY = window.innerHeight / 2; // Initialize to center of screen
+let outlineX = mouseX;  // Initialize outline to same position
+let outlineY = mouseY;  // Initialize outline to same position
+
+// Hide cursors initially
+cursorDot.style.opacity = '0';
+cursorOutline.style.opacity = '0';
+
+// Update cursor position
+document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    
+    // Move dot instantly to cursor position
+    cursorDot.style.left = mouseX + 'px';
+    cursorDot.style.top = mouseY + 'px';
+    
+    // Show cursors on first mouse movement
+    cursorDot.style.opacity = '1';
+    cursorOutline.style.opacity = '0.5';
+});
+
+// Smooth outline animation
+function animateOutline() {
+    // Calculate distance between current outline position and mouse position
+    let dx = mouseX - outlineX;
+    let dy = mouseY - outlineY;
+    
+    // Move outline towards mouse with smooth easing
+    outlineX += dx * 0.15;
+    outlineY += dy * 0.15;
+    
+    cursorOutline.style.left = outlineX + 'px';
+    cursorOutline.style.top = outlineY + 'px';
+    
+    requestAnimationFrame(animateOutline);
+}
+
+// Start the outline animation
+animateOutline();
+
+// Hide cursor when mouse leaves window
+document.addEventListener('mouseout', () => {
+    cursorDot.style.opacity = '0';
+    cursorOutline.style.opacity = '0';
+});
+
+document.addEventListener('mouseover', () => {
+    cursorDot.style.opacity = '1';
+    cursorOutline.style.opacity = '0.5';
+});
+
 // Smooth scrolling with easing
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -226,53 +282,6 @@ updateStatus();
 
 // Update every 30 seconds
 setInterval(updateStatus, 30000);
-
-// Custom cursor animation
-const cursorDot = document.querySelector('.cursor-dot');
-const cursorOutline = document.querySelector('.cursor-outline');
-
-let mouseX = 0;
-let mouseY = 0;
-let outlineX = 0;
-let outlineY = 0;
-
-document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    
-    // Move dot instantly to cursor position
-    cursorDot.style.left = mouseX + 'px';
-    cursorDot.style.top = mouseY + 'px';
-});
-
-// Smooth outline animation
-function animateOutline() {
-    // Calculate distance between current outline position and mouse position
-    let dx = mouseX - outlineX;
-    let dy = mouseY - outlineY;
-    
-    // Move outline towards mouse with smooth easing
-    outlineX += dx * 0.15;
-    outlineY += dy * 0.15;
-    
-    cursorOutline.style.left = outlineX + 'px';
-    cursorOutline.style.top = outlineY + 'px';
-    
-    requestAnimationFrame(animateOutline);
-}
-
-animateOutline();
-
-// Hide cursor when mouse leaves window
-document.addEventListener('mouseout', () => {
-    cursorDot.style.opacity = '0';
-    cursorOutline.style.opacity = '0';
-});
-
-document.addEventListener('mouseover', () => {
-    cursorDot.style.opacity = '1';
-    cursorOutline.style.opacity = '0.5';
-});
 
 // Mobile enhancements
 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
