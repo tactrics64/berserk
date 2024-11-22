@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inviting Berserk - Chess Discord Bot</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta http-equiv="refresh" content="1; url=https://discord.com/api/oauth2/authorize?client_id=1303432107359735828&permissions=397284726784&scope=bot%20applications.commands">
+    <style>
+        .manual-link {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+        .manual-link:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <button class="theme-switch" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <div class="invite-container">
+        <h1 class="invite-message">Redirecting to Discord...</h1>
+        <div class="loading-spinner"></div>
+        <p>If you're not redirected automatically, 
+            <a href="https://discord.com/api/oauth2/authorize?client_id=1303432107359735828&permissions=397284726784&scope=bot%20applications.commands" 
+               class="manual-link">click here</a>
+        </p>
+    </div>
+
+    <script src="../animations.js"></script>
+</body>
+</html> 
